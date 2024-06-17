@@ -1,5 +1,5 @@
 import React from 'react';
-import exampleImage from '../assets/images/sergeant.png';
+import exampleImage from '../assets/images/sergeant copy.png';
 import '../App.css'
 
 const Sergeant = () => {

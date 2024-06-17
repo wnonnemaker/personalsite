@@ -1,9 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/jsmath-cmbx10');
 @import url('https://fonts.cdnfonts.com/css/jsmath-cmti10');
+@import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
 
 .App {
   text-align: center;
-  background-color: #F5F5F5;
+  
 }
 
 .App-logo {
@@ -18,7 +19,7 @@
 }
 
 .App-header {
-  
+  height: auto;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
@@ -87,6 +88,79 @@
   position: relative;
   top: -400px;
   left: -48px;
+}
+
+.videoTheatre{
+  position: absolute;
+  top: 400px;
+  left: 1000px;
+}
+
+.leftBrack{
+  position: relative;
+  left: -340px;
+  font: Lateef;
+  font-size: 500px;
+  font-weight: lighter;
+  z-index: 2;
+}
+
+
+.rightBrack{
+  position: relative;
+  top: -1000px;
+  left: 370px;
+  font: Lateef;
+  font-size: 500px;
+  font-weight: lighter;
+  z-index: 2;
+}
+
+
+
+.theatre-hr{
+  border: none;
+  border-top: 20px solid black;
+   /* Add a solid border */
+  margin: 20px 40px; /* Add vertical spacing */
+  width: 610px;
+  position: relative; /* Enable positioning */
+   /* Position 100px from the top */
+  left: 50px; /* Position 50px from the left */
+  color: #000;
+  z-index: 2;
+}
+
+.animeLedge {
+  border: none;
+  border-top: 20px solid black;
+   /* Add a solid border */
+  margin: 20px 40px; /* Add vertical spacing */
+  width: 680px;
+  position: relative; /* Enable positioning */
+   /* Position 100px from the top */
+  left: -600px; /* Position 50px from the left */
+  top: -1481px;
+  color: #000;
+}
+
+.anime-style{
+  position: relative;
+  top: 60px;
+  left: -120px;
+  
+}
+
+.video-container{
+  position: relative;
+  top: -1917px;
+  left: 35px;
+  z-index: 0;
+  overflow: hidden; /* Hide overflow to create the mask effect */
+  border-radius: 82px; /* Adjust this value to control the roundness of the corners */
+  
+  max-width: 95%;
+  background: white;
 }
 
 .App-link {
