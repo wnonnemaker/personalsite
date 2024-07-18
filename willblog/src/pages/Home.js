@@ -3,6 +3,7 @@ import '../App.css';
 import Sergeant from '../components/Sergeant';
 import Monkey from '../components/Monkey';
 import AnimeGirl from '../components/AnimeGirl';
+import YouTubePlayer from '../components/YouTubePlayer';
 import React, { useState, useEffect } from 'react';
 import { useParams, BrowserRouter as Router, Route, Routes, Link, useNavigate, Outlet } from 'react-router-dom';
 import Brack from '../assets/images/segoebrack.png';
@@ -19,49 +20,16 @@ const Home = ( {articles} ) => {
 
   //video player things
 
-  
+  const YTAPIKEY = process.env.YTAPI_KEY;
 
   const videoId = 'tSIQThHrNIE?si=Sjm4wMMjJ7Wf8lDw';
 
-  useEffect(() => {
-    // Load the IFrame Player API code asynchronously.
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
 
-    // Create an <iframe> (and YouTube player) after the API code downloads.
-    window.onYouTubeIframeAPIReady = function () {
-      const player = new window.YT.Player('youtube-player', {
-        videoId: videoId,
-        width: '750',  // Set the initial width
-        height: '400',
-        events: {
-          onReady: onPlayerReady,
-          onStateChange: onPlayerStateChange,
+  const [isMuted, setIsMuted] = useState(true);
 
-        },
-      });
-
-      function onPlayerReady(event) {
-        // Store the player instance for later use
-        window.player = player;
-        window.player.playVideo();
-      }
-
-      function onPlayerStateChange(event) {
-        if (event.data === window.YT.PlayerState.PLAYING) {
-          console.log('Video is playing');
-        }
-      }
-    };
-  }, [videoId]);
-
-  const handlePlayButtonClick = () => {
-    console.log('click happened');
-    if (window.player) {
-      window.player.playVideo();
-    }
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
   };
 
   
@@ -146,8 +114,16 @@ const Home = ( {articles} ) => {
         <hr className="animeLedge" />
         <div className="video-container">
           {/*<button className="btn btn-primary" onClick={handlePlayButtonClick}>Play Video</button>*/}
-          <div id="youtube-player"></div>
-      </div>
+          
+          <YouTubePlayer videoId= 'tSIQThHrNIE?si=Sjm4wMMjJ7Wf8lDw' isMuted={isMuted}/>  
+          
+        </div>
+          
+          <button onClick={toggleMute} className={`unmute-button ${isMuted ? 'on' : 'off'}`}>
+          {isMuted ? 'Unmute' : 'Mute'}
+          </button>
+          
+          
       </div>
       <AnimeGirl />
     </div>

@@ -188,6 +188,28 @@
   opacity: 0;
 }
 
+.unmute-button{
+  position: absolute;
+  top: 900px;
+  left: 680px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure the button is above the video */
+}
+
+.unmute-button.on{
+  background-color: #4CAF50;
+  color: white;
+}
+
+.unmute-button.off{
+  background-color: #4CAF50;
+  color: white;
+}
+
 .App-link {
   color: #61dafb;
 }
