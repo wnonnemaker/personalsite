@@ -8,8 +8,48 @@ import React, { useState, useEffect } from 'react';
 import { useParams, BrowserRouter as Router, Route, Routes, Link, useNavigate, Outlet } from 'react-router-dom';
 import Brack from '../assets/images/segoebrack.png';
 
+const API_KEY = process.env.YTAPI_KEY;
+
+const CHANNEL_ID = 'UCExiOkMqwQjyMxE-n_qQUsg';
+
+const videoIds = ['kK9kjg2tprA&t=5s', 'Q6b4VK5NIiY&t=205s', 'TGuFD_NN8ec', 
+  'YML-Jfw2GjU&t=82s', 'lkb_RqEIUsw', 'JUhT8K5q0yM', 'E6MFArEkeLw', 'elp66up3wRo&t=1s', 'tSIQThHrNIE', 'vbmayOslHvs&t=1s'
+, 'pJgK7ZFs6-k', 'U9FjlN3F7Zk', 'TL8ZDoOyIJA&t=164s', 'lESAs7sq9UI&t=42s', 'EjfTqzv7glo'];
+
+
 
 const Home = ( {articles} ) => {
+
+
+
+  /*VIDEO ID STUFF */ 
+
+
+  const [randomVideoId, setRandomVideoId] = useState('');
+
+  
+  useEffect(() => {
+    const getRandomVideoId = (videoIds) => {
+      const randomIndex = Math.floor(Math.random() * videoIds.length);
+      return videoIds[randomIndex];
+    };
+
+    if (videoIds.length > 0) {
+      console.log('if statement triggered');
+      setRandomVideoId(getRandomVideoId(videoIds));
+    }
+    console.log(videoIds);
+    console.log(randomVideoId);
+  }, []);
+
+
+  
+  
+
+  
+  /* END YOUTUBE STUFF */
+
+
   const navigate = useNavigate();
 
   const handleInvisibleButtonClick = (e) => {
@@ -20,9 +60,7 @@ const Home = ( {articles} ) => {
 
   //video player things
 
-  const YTAPIKEY = process.env.YTAPI_KEY;
-
-  const videoId = 'tSIQThHrNIE?si=Sjm4wMMjJ7Wf8lDw';
+  
 
   
 
@@ -115,7 +153,7 @@ const Home = ( {articles} ) => {
         <div className="video-container">
           {/*<button className="btn btn-primary" onClick={handlePlayButtonClick}>Play Video</button>*/}
           
-          <YouTubePlayer videoId= 'tSIQThHrNIE?si=Sjm4wMMjJ7Wf8lDw' isMuted={isMuted}/>  
+          {randomVideoId && <YouTubePlayer videoId= {randomVideoId} isMuted={isMuted}/>  }
           
         </div>
           

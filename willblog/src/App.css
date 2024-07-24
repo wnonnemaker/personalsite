@@ -51,7 +51,7 @@
   border-top: 5px solid black;
    /* Add a solid border */
   margin: 20px 40px; /* Add vertical spacing */
-  width: 1400px;
+  width: 1200px;
   position: absolute; /* Enable positioning */
   top: 120px; /* Position 100px from the top */
   left: 50px; /* Position 50px from the left */
@@ -96,11 +96,7 @@
   margin: 0 20px; /* Margin around the line (optional) */
 
 }
-.monkey-style{
-  position: relative;
-  top: -400px;
-  left: -48px;
-}
+
 
 .videoTheatre{
   position: absolute;
@@ -161,12 +157,7 @@
   color: #000;
 }
 
-.anime-style{
-  position: relative;
-  top: -70px;
-  left: -120px;
-  
-}
+
 
 .video-container{
   position: relative;

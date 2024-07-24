@@ -13,7 +13,7 @@ const YouTubeVideo = ({ videoId, isMuted }) => {
     <div >
       <ReactPlayer
           className='react-player'
-          url='https://www.youtube.com/watch?v=tSIQThHrNIE'
+          url={autoplayUrl}
           width='740px'
           height='405px'
           playing = {true}
