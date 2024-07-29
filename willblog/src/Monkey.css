@@ -1,7 +1,7 @@
 .monkey-talk {
     position: relative;
     top: -300px;
-    left: 120px;
+    left: -60px;
     font-family: "Junge", cursive;
     font-weight: 400;
     font-style: normal;
@@ -9,23 +9,22 @@
 }
 
 .monkey-style{
-    position: relative;
-    top: -400px;
-    left: -48px;
+    position: absolute;
+    top: 600px;
+    left: 730px;
     
   }
 
   .text-bubble-monkey {
     position: relative;
-    top: -150px;
-    left: -60px;
+    top: -160px;
+    left: -240px;
     z-index: 2;
   }
 
   .monkey-image{
     position: relative;
     top: -40px;
-    left: 175px;
 
     z-index: 1;
   }

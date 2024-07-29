@@ -3,13 +3,15 @@ import { useNavigate } from 'react-router-dom';
 
 const NewArticleForm = ({ addArticle }) => {
   const [title, setTitle] = useState('');
+  const [subtitle, setSubtitle] = useState('');
   const [content, setContent] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addArticle(title, content);
-    navigate('/'); // Navigate to the home page or wherever you want after adding the article
+    const dateCreated = new Date().toLocaleDateString(); // Capture current date
+    addArticle(title, subtitle, content, dateCreated);
+    navigate('/'); // Navigate to the home page or any other desired route
   };
 
   return (
@@ -24,6 +26,17 @@ const NewArticleForm = ({ addArticle }) => {
             className="form-control"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="subtitle" className="form-label">Subtitle</label>
+          <input
+            type="text"
+            id="subtitle"
+            className="form-control"
+            value={subtitle}
+            onChange={(e) => setSubtitle(e.target.value)}
             required
           />
         </div>

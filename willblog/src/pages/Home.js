@@ -27,6 +27,7 @@ const Home = ( {articles} ) => {
 
   const [randomVideoId, setRandomVideoId] = useState('');
 
+  const sortedArticles = articles.sort((a, b) => new Date(b.dateCreated) - new Date(a.dateCreated));
   
   useEffect(() => {
     const getRandomVideoId = (videoIds) => {
@@ -92,14 +93,16 @@ const Home = ( {articles} ) => {
           </nav>
       {/* header stuff */} 
       <header className="App-header">
-        <h1>
-          Will Blog
-        </h1>
+        
       </header>
       {/* splits header and rest of page */} 
       <div className = "splitter">
         <hr className="header-hr" />
         <Sergeant />
+        <h1 className='title'>
+          Will <br/> 
+          Blog
+        </h1>
       </div>
 
 
@@ -119,20 +122,26 @@ const Home = ( {articles} ) => {
         <h1 style = {{position: 'absolute', top: '300px', left: '100px'}}>
           Some <br/> Writing...
         </h1>
+        <div className="articleBar">
+          <nav>
+            <ul>
+            {sortedArticles.map(article => (
+              <li className="articleList" key={article.id}> 
+                <Link className="articleLink" to={`/article/${article.id}`}>
+                  <h3 style={ {fontSize: '2em', color: 'blue'} }>{article.title}</h3>
+                  <p><em>{article.subtitle}</em></p>
+                  <small> {article.dateCreated}</small>
+                </Link>
+              </li>
+            ))}
+            </ul>
+            
+          </nav>
+        </div>
       </div>
 
       
-        <nav>
-          <ul>
-            
-            {articles.map(article => (
-            <li className='articleList' key={article.id}>
-                <Link to={`/article/${article.id}`}> {article.title} </Link>
-            </li>
-            ))}
-          </ul>
-          
-        </nav>
+        
       
       
 

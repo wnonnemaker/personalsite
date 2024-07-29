@@ -21,8 +21,8 @@ function App() {
     setArticles(storedArticles);
   }, []);
 
-  const addArticle = (title, content) => {
-    const newArticle = { title, content, id: articles.length + 1 };
+  const addArticle = (title, subtitle, content, dateCreated) => {
+    const newArticle = { title, subtitle, content, dateCreated, id: articles.length + 1 };
     const updatedArticles = [...articles, newArticle];
     setArticles(updatedArticles);
     localStorage.setItem('articles', JSON.stringify(updatedArticles));
