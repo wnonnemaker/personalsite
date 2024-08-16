@@ -143,14 +143,14 @@
 
 .videoTheatre{
   position: absolute;
-  top: 400px;
+  top: 2550px;
   left: 1000px;
 }
 
 .leftBrack{
-  position: relative;
-  top: 83px;
-  left: -265px;
+  position: absolute;
+  top: -2233px;
+  left: -140px;
   font: Lateef;
   font-size: 500px;
   font-weight: lighter;
@@ -162,9 +162,9 @@
 
 
 .rightBrack{
-  position: relative;
-  top: -939px;
-  left: 295px;
+  position: absolute;
+  top: -2253px;
+  left: 421px;
   font: Lateef;
   font-size: 500px;
   font-weight: lighter;

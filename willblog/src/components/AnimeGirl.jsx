@@ -12,7 +12,7 @@ const AnimeGirl = () => {
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false );
+    setIsHovered(false);
   };
 
   return (
