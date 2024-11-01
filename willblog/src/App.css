@@ -152,7 +152,7 @@
 
 .leftBrack{
   position: relative;
-  top: 7px;
+  top: -32px;
   left: -160px;
   font: Lateef;
   font-size: 500px;
@@ -166,7 +166,7 @@
 
 .rightBrack{
   position: relative;
-  top: -950px;
+  top: -963px;
   left: 430px;
   font: Lateef;
   font-size: 500px;
@@ -198,8 +198,8 @@
   width: 680px;
   position: relative; /* Enable positioning */
    /* Position 100px from the top */
-  left: -600px; /* Position 50px from the left */
-  top: -1481px;
+  left: -500px; /* Position 50px from the left */
+  top: -1460px;
   color: #000;
 }
 
