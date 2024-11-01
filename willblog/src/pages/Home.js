@@ -1,5 +1,6 @@
 
 import '../App.css';
+import '../normalize.css'
 import Sergeant from '../components/Sergeant';
 import Monkey from '../components/Monkey';
 import AnimeGirl from '../components/AnimeGirl';
