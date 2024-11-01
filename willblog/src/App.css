@@ -143,18 +143,21 @@
 
 .videoTheatre{
   position: absolute;
-  top: 2550px;
-  left: 1000px;
+  top: 350px;
+  left: 900px;
+  z-index: 0;
+  height: fit-content;
+  width: fit-content;
 }
 
 .leftBrack{
-  position: absolute;
-  top: -2233px;
-  left: -140px;
+  position: relative;
+  top: 7px;
+  left: -160px;
   font: Lateef;
   font-size: 500px;
   font-weight: lighter;
-  z-index: 2;
+  z-index: 3;
   
   transform: rotate(90deg); /* Rotate 45 degrees */
   
@@ -162,13 +165,13 @@
 
 
 .rightBrack{
-  position: absolute;
-  top: -2253px;
-  left: 421px;
+  position: relative;
+  top: -950px;
+  left: 430px;
   font: Lateef;
   font-size: 500px;
   font-weight: lighter;
-  z-index: 2;
+  z-index: 4;
   transform: rotate(270deg); /* Rotate 45 degrees */
 }
 
@@ -182,7 +185,7 @@
   width: 610px;
   position: relative; /* Enable positioning */
    /* Position 100px from the top */
-  left: 50px; /* Position 50px from the left */
+  left: 170px; /* Position 50px from the left */
   color: #000;
   z-index: 2;
 }
@@ -204,9 +207,9 @@
 
 .video-container{
   position: relative;
-  top: -1917px;
-  left: 35px;
-  z-index: 0;
+  top: -1900px;
+  left: 155px;
+  z-index: 1;
   overflow: hidden; /* Hide overflow to create the mask effect */
   border-radius: 82px; /* Adjust this value to control the roundness of the corners */
   
