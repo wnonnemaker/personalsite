@@ -152,8 +152,8 @@
 
 .leftBrack{
   position: relative;
-  top: 0px;
-  left: -160px;
+  top: 500px;
+  left: -210px;
   
   z-index: 3;
   
@@ -164,8 +164,8 @@
 
 .rightBrack{
   position: relative;
-  top:0px;
-  left: 430px;
+  top:162px;
+  left: 480px;
   
   z-index: 4;
   transform: rotate(270deg); /* Rotate 45 degrees */
@@ -195,7 +195,7 @@
   position: relative; /* Enable positioning */
    /* Position 100px from the top */
   left: -500px; /* Position 50px from the left */
-  top: 0px;
+  top: 120px;
   color: #000;
 }
 
@@ -203,7 +203,7 @@
 
 .video-container{
   position: relative;
-  top: 0px;
+  top: -315px;
   left: 155px;
   z-index: 1;
   overflow: hidden; /* Hide overflow to create the mask effect */
@@ -223,7 +223,7 @@
 
 .unmute-button{
   position: relative;
-  top: -1940px;
+  top: -360px;
   left: 440px;
   background-color: #007bff;
   color: white;
