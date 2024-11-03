@@ -157,8 +157,8 @@ const Home = ( {articles} ) => {
         <h1 className = 'rightBrack'>
             <img src={Brack} alt="rightBracket" style={{ width: 'auto', height: '288px'}} />
         </h1>
-        <hr className="theatre-hr" style={{top: '-1790px'}}/>
-        <hr className="theatre-hr" style={{top: '-1420px'}}/>
+        <hr className="theatre-hr" style={{top: '-0px'}}/>
+        <hr className="theatre-hr" style={{top: '-0px'}}/>
         <hr className="animeLedge" />
         <div className="video-container">
           {/*<button className="btn btn-primary" onClick={handlePlayButtonClick}>Play Video</button>*/}

@@ -146,17 +146,15 @@
   top: 350px;
   left: 900px;
   z-index: 0;
-  height: fit-content;
-  width: fit-content;
+  /*height: fit-content;
+  width: fit-content;*/
 }
 
 .leftBrack{
   position: relative;
-  top: -32px;
+  top: 0px;
   left: -160px;
-  font: Lateef;
-  font-size: 500px;
-  font-weight: lighter;
+  
   z-index: 3;
   
   transform: rotate(90deg); /* Rotate 45 degrees */
@@ -166,11 +164,9 @@
 
 .rightBrack{
   position: relative;
-  top: -963px;
+  top:0px;
   left: 430px;
-  font: Lateef;
-  font-size: 500px;
-  font-weight: lighter;
+  
   z-index: 4;
   transform: rotate(270deg); /* Rotate 45 degrees */
 }
@@ -199,7 +195,7 @@
   position: relative; /* Enable positioning */
    /* Position 100px from the top */
   left: -500px; /* Position 50px from the left */
-  top: -1460px;
+  top: 0px;
   color: #000;
 }
 
@@ -207,7 +203,7 @@
 
 .video-container{
   position: relative;
-  top: -1900px;
+  top: 0px;
   left: 155px;
   z-index: 1;
   overflow: hidden; /* Hide overflow to create the mask effect */
@@ -226,9 +222,9 @@
 }
 
 .unmute-button{
-  position: absolute;
-  top: -1400px;
-  left: 680px;
+  position: relative;
+  top: -1940px;
+  left: 440px;
   background-color: #007bff;
   color: white;
   border: none;
