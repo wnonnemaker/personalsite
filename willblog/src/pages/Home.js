@@ -113,11 +113,11 @@ const Home = ( {articles} ) => {
       <div className= "writingNook">
         <div className='vertLine' style = {{left: '200px', top: '300px'}} > 
           <div className='stub' style = {{left: '-20px', top: '0px'}}> </div>
-          <div className='stub'style = {{left: '-24px', top: '393px'}}> </div>
+          <div className='stub'style = {{left: '-24px', top: '396px'}}> </div>
         </div>
         <div className='vertLine' style = {{left: '800px', top: '300px'}}> 
           <div className='stub' style = {{left: '-70px', top: '0px'}}> </div>
-          <div className='stub'style = {{left: '-70px', top: '393px'}}> </div>
+          <div className='stub'style = {{left: '-70px', top: '396px'}}> </div>
         </div>
         <Monkey />
         <h1 style = {{position: 'absolute', top: '300px', left: '100px'}}>
