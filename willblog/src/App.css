@@ -153,7 +153,7 @@
 .leftBrack{
   position: relative;
   top: 500px;
-  left: -210px;
+  left: -215px;
   
   z-index: 3;
   
@@ -203,8 +203,8 @@
 
 .video-container{
   position: relative;
-  top: -315px;
-  left: 155px;
+  top: -317px;
+  left: 153px;
   z-index: 1;
   overflow: hidden; /* Hide overflow to create the mask effect */
   border-radius: 82px; /* Adjust this value to control the roundness of the corners */
