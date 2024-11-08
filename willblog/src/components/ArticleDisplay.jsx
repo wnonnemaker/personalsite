@@ -4,21 +4,30 @@ import { useParams } from 'react-router-dom';
 const ArticleDisplay = () => {
 
     const {id} = useParams() 
-    const [article, setArticles] = useState([]);
-
-    useEffect(() => {
-        // Load articles from local storage or initialize with some articles
-        const storedArticles = JSON.parse(localStorage.getItem('articles')) || [];
-        const foundArticle = storedArticles.find(article => article.id == parseInt(id))
-        setArticles(foundArticle);
+    const [content, setContent] = useState('');
+    useEffect(() => {	
+		const fetchMarkdown = async () => {
+			try {
+				const response = await fetch('/src/articles/${id}.md');
+				const text = await response.text();
+				console.log(text);
+				console.log(id);
+				setContent(text);
+			} catch (error) {
+				console.error('Error fetching matching md file:', error);
+			}
+		};
+		
+		fetchMarkdown();
       }, [id]);
+
 
     
 
     return (
         <div>
-          <h2>{article.title}</h2>
-          <p>{article.content}</p>
+		//	<md-block> {content} </md-block>
+			{content}
         </div>
       );
 
