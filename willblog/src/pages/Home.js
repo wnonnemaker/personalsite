@@ -8,6 +8,7 @@ import YouTubePlayer from '../components/YouTubePlayer';
 import React, { useState, useEffect } from 'react';
 import { useParams, BrowserRouter as Router, Route, Routes, Link, useNavigate, Outlet } from 'react-router-dom';
 import Brack from '../assets/images/segoebrack.png';
+import articles from '../articles.json';
 
 const API_KEY = process.env.YTAPI_KEY;
 
@@ -18,8 +19,7 @@ const videoIds = ['kK9kjg2tprA&t=5s', 'Q6b4VK5NIiY&t=205s', 'TGuFD_NN8ec',
 , 'pJgK7ZFs6-k', 'U9FjlN3F7Zk', 'TL8ZDoOyIJA&t=164s', 'lESAs7sq9UI&t=42s', 'EjfTqzv7glo'];
 
 
-
-const Home = ( {articles} ) => {
+const Home = () => {
 
 
 
@@ -28,7 +28,7 @@ const Home = ( {articles} ) => {
 
   const [randomVideoId, setRandomVideoId] = useState('');
 
-  const sortedArticles = articles.sort((a, b) => new Date(b.dateCreated) - new Date(a.dateCreated));
+  const sortedArticles = articles.sort((a, b) => new Date(b.date) - new Date(a.date));
   
   useEffect(() => {
     const getRandomVideoId = (videoIds) => {
@@ -43,10 +43,6 @@ const Home = ( {articles} ) => {
     console.log(videoIds);
     console.log(randomVideoId);
   }, []);
-
-
-  
-  
 
   
   /* END YOUTUBE STUFF */
@@ -63,20 +59,11 @@ const Home = ( {articles} ) => {
   //video player things
 
   
-
-  
-
   const [isMuted, setIsMuted] = useState(true);
 
   const toggleMute = () => {
     setIsMuted(!isMuted);
   };
-
-  
-
-
-  //These are article things
-
 
 
   //all the html stuff
@@ -127,11 +114,11 @@ const Home = ( {articles} ) => {
           <nav>
             <ul>
             {sortedArticles.map(article => (
-              <li className="articleList" key={article.id}> 
-                <Link className="articleLink" to={`/article/${article.id}`}>
+              <li className="articleList" key={article.shorttitle}> 
+                <Link className="articleLink" to={`/article/${article.shorttitle}`}>
                   <h3 style={ {fontSize: '2em', color: 'blue'} }>{article.title}</h3>
                   <p><em>{article.subtitle}</em></p>
-                  <small> {article.dateCreated}</small>
+                  <small> {article.date}</small>
                 </Link>
               </li>
             ))}
