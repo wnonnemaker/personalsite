@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/jsmath-cmbx10');
 @import url('https://fonts.cdnfonts.com/css/jsmath-cmti10');
 @import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Junge&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .App {
   text-align: center;
@@ -21,12 +22,20 @@
 .App-header {
   height: auto;
   min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  
+  
   font-size: calc(10px + 2vmin);
  
+}
+
+.title{
+  position: absolute;
+  top: 20px;
+  left: 200px;
+  z-index: 4;
+  font-family: 'jsMath-cmbx10', sans-serif;
+  font-size: 36px; /* Change the font size */
+  color: #000000; /* Change the font color */
 }
 
 .App-header h1 {
@@ -34,9 +43,10 @@
   top: 20px;
   left: -600px;
  
-  font-family: 'jsMath-cmbx10', sans-serif; /* Change the font */
-  font-size: 36px; /* Change the font size */
-  color: #000000; /* Change the font color */
+   /* Change the font */
+   font-family: 'jsMath-cmbx10', sans-serif;
+   font-size: 36px; /* Change the font size */
+   color: #000000; /* Change the font color */
 }
 
 /*.splitter {
@@ -51,7 +61,7 @@
   border-top: 5px solid black;
    /* Add a solid border */
   margin: 20px 40px; /* Add vertical spacing */
-  width: 1400px;
+  width: 1200px;
   position: absolute; /* Enable positioning */
   top: 120px; /* Position 100px from the top */
   left: 50px; /* Position 50px from the left */
@@ -68,13 +78,58 @@
   font-size: 10px;
 }
 
+.newArticleLink{
+  position: relative;
+  top: -400px;
+  left: -500px;
+}
+
+.articleBar{
+  position: absolute;
+  top: 300px;
+  left: 220px;
+  max-height: 600px;
+  overflow-y: scroll;
+  width: 600px;
+   /* Remove default list styling */
+  /*max-height: 600px; /* Set your desired max height */
+}
+
+.articleList{
+  list-style-type: none;
+  position: relative;
+  
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  color: #000;
+  z-index: 2;
+  
+}
+
+.articleLink{
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  line-height: .8;
+  color: #000;
+  text-decoration: none;
+  z-index: 3;
+}
+
+
+
+
 .vertLine {
   position: absolute;
   border-left: 4px solid black; /* Thickness and color of the line */
   height: 500px; /* Height of the line */
   margin: 0 20px; /* Margin around the line (optional) */
-
 }
+
 .stub {
   position: relative;
   
@@ -84,36 +139,36 @@
   margin: 0 20px; /* Margin around the line (optional) */
 
 }
-.monkey-style{
-  position: relative;
-  top: -400px;
-  left: -48px;
-}
+
 
 .videoTheatre{
   position: absolute;
-  top: 400px;
-  left: 1000px;
+  top: 350px;
+  left: 900px;
+  z-index: 0;
+  /*height: fit-content;
+  width: fit-content;*/
 }
 
 .leftBrack{
   position: relative;
-  left: -340px;
-  font: Lateef;
-  font-size: 500px;
-  font-weight: lighter;
-  z-index: 2;
+  top: 500px;
+  left: -210px;
+  
+  z-index: 3;
+  
+  transform: rotate(90deg); /* Rotate 45 degrees */
+  
 }
 
 
 .rightBrack{
   position: relative;
-  top: -1000px;
-  left: 370px;
-  font: Lateef;
-  font-size: 500px;
-  font-weight: lighter;
-  z-index: 2;
+  top:162px;
+  left: 480px;
+  
+  z-index: 4;
+  transform: rotate(270deg); /* Rotate 45 degrees */
 }
 
 
@@ -126,7 +181,7 @@
   width: 610px;
   position: relative; /* Enable positioning */
    /* Position 100px from the top */
-  left: 50px; /* Position 50px from the left */
+  left: 170px; /* Position 50px from the left */
   color: #000;
   z-index: 2;
 }
@@ -139,28 +194,53 @@
   width: 680px;
   position: relative; /* Enable positioning */
    /* Position 100px from the top */
-  left: -600px; /* Position 50px from the left */
-  top: -1481px;
+  left: -500px; /* Position 50px from the left */
+  top: 120px;
   color: #000;
 }
 
-.anime-style{
-  position: relative;
-  top: 60px;
-  left: -120px;
-  
-}
+
 
 .video-container{
   position: relative;
-  top: -1917px;
-  left: 35px;
-  z-index: 0;
+  top: -315px;
+  left: 155px;
+  z-index: 1;
   overflow: hidden; /* Hide overflow to create the mask effect */
   border-radius: 82px; /* Adjust this value to control the roundness of the corners */
   
   max-width: 95%;
   background: white;
+}
+
+.invisButton{
+  list-style: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+}
+
+.unmute-button{
+  position: relative;
+  top: -360px;
+  left: 440px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure the button is above the video */
+}
+
+.unmute-button.on{
+  background-color: #4CAF50;
+  color: white;
+}
+
+.unmute-button.off{
+  background-color: #4CAF50;
+  color: white;
 }
 
 .App-link {
