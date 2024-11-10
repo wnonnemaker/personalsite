@@ -1,5 +1,5 @@
 
-import '../App.css';
+import '../styles/App.css';
 import React, { useState, useEffect } from 'react';
 import { useParams, BrowserRouter as Router, Route, Routes, Link, useNavigate, Outlet } from 'react-router-dom';
 

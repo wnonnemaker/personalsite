@@ -1,6 +1,6 @@
 
-import '../App.css';
-import '../normalize.css'
+import '../styles/App.css';
+import '../styles/normalize.css'
 import Sergeant from '../components/Sergeant';
 import Monkey from '../components/Monkey';
 import AnimeGirl from '../components/AnimeGirl';
@@ -37,7 +37,6 @@ const Home = () => {
     };
 
     if (videoIds.length > 0) {
-      console.log('if statement triggered');
       setRandomVideoId(getRandomVideoId(videoIds));
     }
     console.log(videoIds);

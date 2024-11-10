@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import {MarkdownBlock, MarkdownSpan, MarkdownElement} from "md-block";
+import ReactMarkdown from 'react-markdown';
+import '../styles/ArticleDisplay.css'
+
 
 const ArticleDisplay = () => {
 
@@ -8,10 +12,8 @@ const ArticleDisplay = () => {
     useEffect(() => {	
 		const fetchMarkdown = async () => {
 			try {
-				const response = await fetch('/src/articles/${id}.md');
+				const response = await fetch(`${process.env.PUBLIC_URL}/articles/${id}.md`);
 				const text = await response.text();
-				console.log(text);
-				console.log(id);
 				setContent(text);
 			} catch (error) {
 				console.error('Error fetching matching md file:', error);
@@ -25,9 +27,9 @@ const ArticleDisplay = () => {
     
 
     return (
-        <div>
-		//	<md-block> {content} </md-block>
-			{content}
+        <div className='body'>
+		<ReactMarkdown children = {content}/>
+			
         </div>
       );
 

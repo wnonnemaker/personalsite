@@ -1,5 +1,5 @@
 
-import './App.css';
+import './styles/App.css';
 import Home from './pages/Home'
 import NewArticleForm from './pages/NewArticleForm';
 import Login from './pages/Login';

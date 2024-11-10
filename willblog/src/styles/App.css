@@ -5,7 +5,8 @@
 
 .App {
   text-align: center;
-  
+  min-height: 100vh;
+  margin: 0;
 }
 
 .App-logo {
@@ -208,7 +209,6 @@
   z-index: 1;
   overflow: hidden; /* Hide overflow to create the mask effect */
   border-radius: 82px; /* Adjust this value to control the roundness of the corners */
-  
   max-width: 95%;
   background: white;
   pointer-events: none;

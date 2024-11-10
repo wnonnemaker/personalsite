@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import exampleImage from '../assets/images/anime.png';
 import textBox from '../assets/images/textBox2.png';
-import '../AnimeGirl.css'
+import '../styles/AnimeGirl.css'
 
 const AnimeGirl = () => {
 

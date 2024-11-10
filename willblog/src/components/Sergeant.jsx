@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import sergeant from '../assets/images/sergeant.png';
 import sergeantOpen from '../assets/images/sergeant-open.png';
 import textBox from '../assets/images/textBox2.png';
-import '../Sergeant.css'
+import '../styles/Sergeant.css'
 
 const Sergeant = () => {
 

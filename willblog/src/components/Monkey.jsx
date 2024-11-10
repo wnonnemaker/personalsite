@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import exampleImage from '../assets/images/monkey.png';
 import textBubble from '../assets/images/textBox3.png';
-import '../App.css'
-import '../Monkey.css'
+import '../styles/App.css'
+import '../styles/Monkey.css'
 
 const Monkey = () => {
 
