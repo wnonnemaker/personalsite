@@ -56,15 +56,17 @@ const Home = () => {
   };
 
   //video player things
-
   
   const [isMuted, setIsMuted] = useState(true);
+  const [volume , setVolume] = useState(50);
 
   const toggleMute = () => {
     setIsMuted(!isMuted);
   };
 
-
+  const changeVolume = (value) => {
+    setVolume(value);
+  };
   //all the html stuff
 
 
@@ -125,15 +127,10 @@ const Home = () => {
             
           </nav>
         </div>
-      </div>
-
-      
-        
-      
+      </div> 
       
 
       {/* video theatre */} 
-
 
 
       <div className = "videoTheatre">
@@ -149,15 +146,23 @@ const Home = () => {
         <div className="video-container">
           {/*<button className="btn btn-primary" onClick={handlePlayButtonClick}>Play Video</button>*/}
           
-          {randomVideoId && <YouTubePlayer videoId= {randomVideoId} isMuted={isMuted}/>  }
+          {randomVideoId && <YouTubePlayer videoId= {randomVideoId} isMuted={isMuted} volume={volume}/>  }
           
         </div>
           
           <button onClick={toggleMute} className={`unmute-button ${isMuted ? 'on' : 'off'}`}>
-          {isMuted ? 'Unmute' : 'Mute'}
+                    {isMuted ? 'Unmute' : 'Mute'}
           </button>
-          
-          
+
+          <input
+          onChange={(e) => changeVolume(e.target.value)}
+          type="range"
+          id="volume-control"
+          class="volume-slider"
+          min="00"
+          max="100"
+          value={volume}
+          />
       </div>
       <AnimeGirl />
     </div>

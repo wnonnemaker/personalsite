@@ -14,7 +14,9 @@ const ArticleDisplay = () => {
 			try {
 				const response = await fetch(`${process.env.PUBLIC_URL}/articles/${id}.md`);
 				const text = await response.text();
+				console.log(text)
 				setContent(text);
+				console.log(content);
 			} catch (error) {
 				console.error('Error fetching matching md file:', error);
 			}
@@ -24,13 +26,12 @@ const ArticleDisplay = () => {
       }, [id]);
 
 
-    
-
     return (
-        <div className='body'>
-		<ReactMarkdown children = {content}/>
-			
-        </div>
+		<div className='article-display'>
+            <div className='body'>
+				<ReactMarkdown children = {content}/>
+            </div>
+		</div>
       );
 
   }; 

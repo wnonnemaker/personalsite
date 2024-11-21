@@ -1,15 +1,12 @@
----
-title: 'ChatGPT is killing your coding GAINZ'
-date: '11-13-2024'
-shorttitle: 'chatgptevil'
----
+## Chat GPT is killing your coding GAINZ
+### Reading this article will save you tons of wasted time in the editor
 As a zoomer with no patience and that gimme gimme gimme mindset, I would never take the time to learn JavaScript, React, Next.js, CSS, HTML, and any other bullshit that would be required to write and host a personal website. Obviously, I would just use ChatGPT to write the whole thing for me!
 
 Unfortunatley, this seemingly easy route to a functional website led to some problems. Specifically, that at the end of it, I still had no idea how to code in JavaScript! How could this have happened!
 
 Here's my theory.
 
-###The Theory
+### The Theory
 I am currently reading a book which leant a helpful explanation to the described phenomenon. *Rationality for Mortals* by Gerd Gigerenzer discusses how the human and animal minds operate and make decisions. In one chapter, it describes how children learn language. They start with small, simple sentences. Once they have mastered the basics - they can move on to more complex sentences. This same phenomen was observed when trying to teach a CNN how to formulate sentences. If the training data was made up of complex sentences, the model wasn't able to accurately generate new complex sentences. Instead, by feeding the model simple sentences then working up to complex sentences, the model was able to learn the basic rules of language; once it had the basic rules, it could understand the structure of more complex ones.
 
 What does this have to do with coding?

@@ -1,6 +1,6 @@
-.body {
+.article-display .body {
     color: white;
-    max-width: 50%;
+    max-width: 70%;
     margin: 0 auto;
     padding: 2%;
     border: 4px solid #ccc;  
@@ -17,4 +17,19 @@
     height: calc(100vh - 20px);         /* Full viewport height minus margin */
     overflow-y: auto;                   /* Allows scrolling if content overflows */
     box-sizing: border-box;             /* Ensures padding is included in height */
+}
+
+.article-display h2 {
+    text-align: center;
+    font-style: normal;
+    
+}
+
+.article-display h3 {
+    text-align: center;
+    font-style: italic;
+}
+
+.body .textContainer {
+    max-width: 70%;
 }
