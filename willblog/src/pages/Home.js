@@ -9,6 +9,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, BrowserRouter as Router, Route, Routes, Link, useNavigate, Outlet } from 'react-router-dom';
 import Brack from '../assets/images/segoebrack.png';
 import articles from '../articles.json';
+import muteIcon from '../assets/images/no-volume-icon.png';
+import volIcon from '../assets/images/volume-icon.png'; 
 
 const API_KEY = process.env.YTAPI_KEY;
 
@@ -65,6 +67,7 @@ const Home = () => {
   };
 
   const changeVolume = (value) => {
+    setIsMuted(false);
     setVolume(value);
   };
   //all the html stuff
@@ -140,8 +143,8 @@ const Home = () => {
         <h1 className = 'rightBrack'>
             <img src={Brack} alt="rightBracket" style={{ width: 'auto', height: '288px'}} />
         </h1>
-        <hr className="theatre-hr" style={{top: '-210px'}}/>
-        <hr className="theatre-hr" style={{top: '160px'}}/>
+        <hr className="theatre-hr" style={{top: '-218px'}}/>
+        <hr className="theatre-hr" style={{top: '192px'}}/>
         <hr className="animeLedge" />
         <div className="video-container">
           {/*<button className="btn btn-primary" onClick={handlePlayButtonClick}>Play Video</button>*/}
@@ -149,22 +152,25 @@ const Home = () => {
           {randomVideoId && <YouTubePlayer videoId= {randomVideoId} isMuted={isMuted} volume={volume}/>  }
           
         </div>
-          
-          <button onClick={toggleMute} className={`unmute-button ${isMuted ? 'on' : 'off'}`}>
-                    {isMuted ? 'Unmute' : 'Mute'}
+        <div className='volume-control'>
+          <button onClick={toggleMute} className='mute-button' >
+                    {isMuted ? (
+                      <img src = {muteIcon} className='mute-icon'/>
+                    ) : (
+                      <img src = {volIcon} className='vol-icon'/>
+                    )}
           </button>
-
           <input
           onChange={(e) => changeVolume(e.target.value)}
-          type="range"
-          id="volume-control"
-          class="volume-slider"
+          type="range" 
+          className="volume-slider"
           min="00"
           max="100"
           value={volume}
           />
+        </div>
+        <AnimeGirl style={{position: 'absolute', left: '200px', top: '80px'}} />
       </div>
-      <AnimeGirl />
     </div>
   );
 }

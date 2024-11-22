@@ -143,8 +143,8 @@
 
 
 .videoTheatre{
-  position: absolute;
-  top: 350px;
+  position: relative;
+  top: 50px;
   left: 900px;
   z-index: 0;
   /*height: fit-content;
@@ -152,9 +152,9 @@
 }
 
 .leftBrack{
-  position: relative;
-  top: 500px;
-  left: -215px;
+  position: absolute;
+  top: -153px;
+  left: -4.3%;
   
   z-index: 3;
   
@@ -164,9 +164,9 @@
 
 
 .rightBrack{
-  position: relative;
-  top:162px;
-  left: 480px;
+  position: absolute;
+  top: -174px;
+  left: 30%;
   
   z-index: 4;
   transform: rotate(270deg); /* Rotate 45 degrees */
@@ -178,11 +178,10 @@
   border: none;
   border-top: 20px solid black;
    /* Add a solid border */
-  margin: 20px 40px; /* Add vertical spacing */
-  width: 610px;
-  position: relative; /* Enable positioning */
+  width: 30%;
+  position: absolute; /* Enable positioning */
    /* Position 100px from the top */
-  left: 170px; /* Position 50px from the left */
+  left: 210px; /* Position 50px from the left */
   color: #000;
   z-index: 2;
 }
@@ -191,25 +190,24 @@
   border: none;
   border-top: 20px solid black;
    /* Add a solid border */
-  margin: 20px 40px; /* Add vertical spacing */
   width: 680px;
-  position: relative; /* Enable positioning */
+  position: absolute; /* Enable positioning */
    /* Position 100px from the top */
-  left: -500px; /* Position 50px from the left */
-  top: 120px;
+  left: -450px; /* Position 50px from the left */
+  top: 193px;
   color: #000;
 }
 
 
 
 .video-container{
-  position: relative;
-  top: -317px;
-  left: 153px;
+  position: absolute;
+  top: -200px;
+  left: 155px;
   z-index: 1;
   overflow: hidden; /* Hide overflow to create the mask effect */
-  border-radius: 82px; /* Adjust this value to control the roundness of the corners */
-  max-width: 95%;
+  border-radius: 62px; /* Adjust this value to control the roundness of the corners */
+  max-width: 36%;
   background: white;
   pointer-events: none;
 }
@@ -222,27 +220,53 @@
   opacity: 0;
 }
 
-.unmute-button{
-  position: relative;
-  top: -360px;
-  left: 440px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1000; /* Ensure the button is above the video */
+.volume-control {
+  z-index: 0;
+  position: absolute;
+  top: 300px;
+  left: 60px;
+  width: 30%;
+  height: 80px;
 }
 
-.unmute-button.on{
-  background-color: #4CAF50;
-  color: white;
+.volume-slider {
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  width: 60%;
+  z-index: 10;
 }
 
-.unmute-button.off{
-  background-color: #4CAF50;
-  color: white;
+.mute-button {
+  background: none;
+  margin: 0;
+  padding: 0;
+  width: 0px;
 }
+
+.mute-icon {
+  position: absolute;
+  height: auto;
+  width: 200px;
+  z-index: 11;
+  background: none;
+  margin: 0px;
+  padding: 0px;
+  bottom: 60px;
+  left: 150px;
+  }
+
+.vol-icon {
+  position: absolute;
+  height: auto;
+  width: 200px;
+  background: none;
+  margin: 0px;
+  padding: 0px;
+  bottom: 63px;
+  left: 144px;
+
+  }
 
 .App-link {
   color: #61dafb;

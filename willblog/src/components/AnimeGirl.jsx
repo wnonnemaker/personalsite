@@ -32,7 +32,9 @@ const AnimeGirl = () => {
         </div>
       ) :
       (
+        <div className='group2'>
         <img src={exampleImage} className = "anime-girl" alt="anime"  />
+        </div>
       )}
       
     </div>

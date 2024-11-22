@@ -3,6 +3,7 @@
 .anime-girl{
     position: absolute;
     top: -175px;
+    left: 0px;
     width: 550px;
     height: auto;
     z-index: 3;
@@ -39,9 +40,9 @@
 }
 
 .anime-style{
-    position: absolute;
-    top: 1150px;
-    left: 500px;
+    position: relative;
+    top: 140px;
+    left: -500px;
     
   }
 
