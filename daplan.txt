@@ -1,0 +1,12 @@
+1. Have json file that stores metadata about md files
+
+2. MD files are identified by their shorttitle
+
+3. Ideally i can add the files to my reactapp with a shell script
+
+ACTIONABLES
+1. Create articles.json - add first md file as an object
+
+2. Edit Home.js so it reads the json file for the links
+
+3. Edit Article.js so that it reads shorttitles as id - process the raw md file

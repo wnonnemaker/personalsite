@@ -1,0 +1,39 @@
+.monkey-talk {
+    position: absolute;
+    top: -140px;
+    left: 127px;
+    font-family: "Junge", cursive;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 3;
+    width: 300px;
+}
+
+.monkey-style{
+    position: absolute;
+    top: 600px;
+    left: 730px;
+    
+  }
+
+  .text-bubble-monkey {
+    position: absolute;
+    top: -200px;
+    left: 100px;
+    z-index: 2;
+    
+  }
+
+  .monkey-image{
+    position: absolute;
+    top: -40px;
+
+    z-index: 1;
+  }
+
+  .monkey-image2{
+    position: absolute;
+    top: -45px;
+
+    z-index: 1;
+  }
